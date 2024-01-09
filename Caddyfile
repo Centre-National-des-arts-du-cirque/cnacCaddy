@@ -1,0 +1,11 @@
+localhost:80 {
+  root * /var/www/html/public 
+  php_fastcgi php:9000
+}
+
+{
+    email technique@cnac.fr
+}
+localhost:81 {
+    reverse_proxy matomo:81
+}
